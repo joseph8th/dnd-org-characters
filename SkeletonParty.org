@@ -1,0 +1,31 @@
+#+TITLE: Venture Forth
+#+AUTHOR: Joseph Edwards VIII
+
+#+STARTUP: indent showall hideblocks
+
+* Skeleton Party
+:help:
+Add org file links using ~[[file:path][Character Name]]~ syntax to the list below.
+:END:
+
+** Characters
+
+*** Skeleton
+:PROPERTIES:
+:EXPORT_FILE_NAME: Skeleton.org
+:END:
+
+See: [[file:Skeleton.org][Skeleton]]
+
+*** Ralon Mok
+- [[file:RalonMok.org][Ralon Mok]]
+
+* Encounters
+:help:
+Enable ~org-d20-mode~, then do ~C-c , i~ to start an encounter.
+:END:
+
+* Journal
+:help:
+DM's journal, if desired.
+:END:

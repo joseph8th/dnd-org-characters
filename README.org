@@ -1,0 +1,111 @@
+#+TITLE: Skeleton Party
+#+AUTHOR: Joseph Edwards VIII
+
+#+STARTUP: indent showall hideblocks
+#+OPTIONS: toc:nil
+
+* Skeleton Party
+** [[file:Skeleton.org][Skeleton]]
+** [[file:RalonMok.org][RalonMok]]
+
+* Config :noexport:
+
+** Get sum of field list
+
+An expression to sum a string containing a space-separated list of numbers from a single table cell.
+
+#+NAME: dnd-sum-cell
+#+BEGIN_SRC emacs-lisp :var fl=""
+  (apply '+ (mapcar 'string-to-number (split-string fl)))
+#+END_SRC
+
+Example:
+
+#+begin_src emacs-lisp
+  (org-sbe "dnd-sum-cell" (fl $"1 2 3 4"))
+#+end_src
+
+#+RESULTS:
+: 10
+
+** TODO Get min of value or sum of field list
+
+#+NAME: dnd-min-sum-el
+#+BEGIN_SRC emacs-lisp :var m=0 :var fl=""
+  (min m (apply '+ (mapcar 'string-to-number (split-string fl))))
+#+END_SRC
+
+#+NAME: dnd-min-sum
+#+BEGIN_SRC python :var m=0 :var fl="" :exports none
+  l = map(int, fl.split())
+  return min(int(m), sum(l))
+#+END_SRC
+
+Example:
+
+#+BEGIN_SRC emacs-lisp
+  (org-sbe "dnd-min-sum" (m 12) (fl $"0 1 2"))
+#+END_SRC
+
+#+RESULTS:
+: 3
+
+
+* Journal
+** <2020-12-25 Fri>
+*** Meets TORBAN MELICOSE
+*** Quest to save some stranded dwarves ??
+*** Overheard: Will I be the killer's next victim? Killer with no face.
+**** Shield dwarf eying us from the corner
+**** Gorin got it in the back
+**** Town council sacrifice to Orol
+*** SHELM TROLLBANE dwarf a regular eying us from the corner:
+**** BRYN SHANDAR Investigating murders in 10 towns - 3 so far
+***** BARICK GLASSBLOWER was latest victim
+***** 100gp to investigate SEPHIK KALTROW murderer and bring back proof
+**** TORG: headed to Targos
+***** Shady mercantile company in Ten Towns
+***** TORGS ICEVEIN might be involved or not
+***** Selling adventuring gear, killing people to get them?
+***** Stabbed with ice, which melts away.
+***** AURIL the FROSTMAIDEN? Targeting Easthaven, Brandandshar, Westhaven next?
+***** Track down ToRGS!
+***** Black Iron Blades - Ask for GORON or ELSA
+***** House of Morning Lord - Ask for Mission retired human adventurer with healing
+***** Borrow a sled? Head to teh stables
+*** Equipment at Black Iron Blades:
+**** Overhear a rumor:
+***** Tourmelain closed one of the mines. Kobolds closed the mine. Well-compensated.
+**** GARN the hammer they call me, and ELSA comes out
+**** PAY 2gp for Ice pick
+*** House of Morning Lord temple:
+**** MISSION Priest saying prayers - why hve you forgotten Icewind Dale?
+**** He acts suspiciously and invites us in
+**** Amanader rightful place in the sky makes the sun rise and give warmth
+**** Red gnome gets excited - Copper
+***** Mersodious hangs out in cabin in the woods - check on him?
+*** Rumor of wizard to be burned at the stake
+*** Stables:
+**** Seem closed, but we enter anyway
+**** 5 gp for helping out + WARLORD wolf as companion
+
+** <2020-12-29 Tue>
+- BRYN Shander:
+  - Meet PUCK (Carlos)
+- ROAD:
+  - Meet Dog "Boy" owner KEEGAN VELIRON
+    - Talks about his missing husband GARICK
+    - GARICK went up KELVIN's CAIRN with BOY guiding visitors
+    - Frozen Far Expeditions in Karakonig
+  - Gives us a SLED
+- General Store - Justin Humray 2gp for a fishing pole + bait extra
+  - Fishing Pole - 1 gp 0.5 lb w/line & bait
+- Bremen's Harbor - iced over
+- 5 Taverns
+  - Black-bearded Brother
+  - Grumpy Moose
+  - Even Keel
+    - Bodyguard of caravan suspicious?
+    - Directions to the MEUR DULEDAN
+- SELPHIK KALTROW found
+  - We kill him and he says "AURAL where are you"
